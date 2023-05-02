@@ -1,5 +1,6 @@
 # TOTP2GO
 A Google Authenticator like TOTP generator that runs on M5StickC Plus (and potentially other ESP32 platforms)
+![photo1](https://user-images.githubusercontent.com/1758212/235727026-7d5deed3-63ee-4ebb-945e-60a5c6f52713.jpg)
 
 ## Background
 I am a daily Google Authenticator user. I know the benefit of adopting 2AF in the authentication process. The more the 2AF tokens are stored in the app, the more nervous I become. I can't stop thinking how much trouble I will have if I lose or damage my phone. 
@@ -7,6 +8,10 @@ I am a daily Google Authenticator user. I know the benefit of adopting 2AF in th
 Google recently added a cloud backup feature for the authenticator app, and I don't feel uncomfortable at all. If thing can be done offline, why do it online?
 
 So I grabbed my M5Stick C Plus, opened Arduino editor, and started this project.
+
+## Demo Video
+[![Watch the video](https://user-images.githubusercontent.com/1758212/235731467-25f1f88e-d946-4f31-b195-46601c6befb3.png)](https://youtu.be/OL_iH70hY_o)
+
 
 ## Requirements
 M5StickC Plus
@@ -48,6 +53,9 @@ in the code. They are the essential parts that need your attention.
 
 ### Section 1
 TOTP generation depends on time, so we must ensure your stick has an accurate time. Input your Wifi connection details, and we can set the correct time from the NTP server for you.
+
+![photo2](https://user-images.githubusercontent.com/1758212/235727146-12c29839-1996-47e0-a77d-1185772e5d6e.jpg)
+
 
 Besides Wifi details, we need to know your timezone as well. Please access https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv and find the correct value that suits your need. For example, everyone lives in London should fill in "GMT0BST,M3.5.0/1,M10.5.0"
 
